@@ -23,25 +23,29 @@ main {
 }
 
 .genius .green {
-    grid-area: 'green';
+    grid-area: green;
     background-color: green;
-    border-bottom-right-radius: 100%;
+    border-top-left-radius: 100%;
 }
 
 .genius .red {
-    grid-area: 'red';
+    grid-area: red;
     background-color: red;
-    border-bottom-left-radius: 100%;
-}
-
-.genius .yellow {
-    grid-area: 'yellow';
-    background-color: yellow;
     border-top-right-radius: 100%;
 }
 
+.genius .yellow {
+    grid-area: yellow;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+}
+
 .genius .blue {
-    grid-area: 'blue';
+    grid-area: blue;
     background-color: blue;
-    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+.selected {
+    opacity: 0.5;
 }
