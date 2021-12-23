@@ -26,24 +26,28 @@ main {
     grid-area: green;
     background-color: green;
     border-top-left-radius: 100%;
+    cursor: pointer;
 }
 
 .genius .red {
     grid-area: red;
     background-color: red;
     border-top-right-radius: 100%;
+    cursor: pointer;
 }
 
 .genius .yellow {
     grid-area: yellow;
     background-color: yellow;
     border-bottom-left-radius: 100%;
+    cursor: pointer;
 }
 
 .genius .blue {
     grid-area: blue;
     background-color: blue;
     border-bottom-right-radius: 100%;
+    cursor: pointer;
 }
 
 .selected {

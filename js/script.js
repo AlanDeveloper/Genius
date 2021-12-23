@@ -28,7 +28,7 @@ let lightColor = (element, number) => {
     }, number - 250);
     setTimeout(() => {
         element.classList.remove('selected');
-    }, number - 250);
+    }, number + 200);
 }
 
 let checkOrder = () => {
@@ -51,8 +51,10 @@ let click = (color) => {
     
     setTimeout(() => {
         createColorElement(color).classList.remove('selected');
-        checkOrder();
     }, 250);
+    setTimeout(() => {
+        checkOrder();
+    }, 300);
 }
 
 let createColorElement = (color) => {
@@ -68,7 +70,7 @@ let nextLevel = () => {
 }
 
 let lose = () => {
-    alert(`Pontuação: ${score}\nVocê perdeu o jogo!Clique em OK para iniciar um novo jogo!`);
+    alert(`Pontuação: ${score}\nVocê perdeu o jogo! Clique em OK para iniciar um novo jogo!`);
     order = [];
     clickedOrder = [];
 
@@ -76,15 +78,15 @@ let lose = () => {
 }
 
 let play = () => {
-    alert('Bem vindo ao Gênesis!Iniciando novo jogo!');
+    alert('Bem vindo ao Gênesis! Iniciando novo jogo!');
     score = 0;
 
     nextLevel();
 }
 
-green.addEventListener('click', click(0));
-red.addEventListener('click', click(1));
-yellow.addEventListener('click', click(2));
-blue.addEventListener('click', click(3));
+green.onclick = () => click(0);
+red.onclick = () => click(1);
+yellow.onclick = () => click(2);
+blue.onclick = () => click(3);
 
 play();
