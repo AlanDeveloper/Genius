@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    color: dimgray;
+    font-family: sans-serif;
     background-color: rgb(208, 255, 239);
 }
 
@@ -7,8 +9,23 @@ main {
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+main > div {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
 }
 
 .genius {
@@ -20,6 +37,7 @@ main {
     border-radius: 100%;
     width: 700px;
     height: 700px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .genius .green {
@@ -52,4 +70,17 @@ main {
 
 .selected {
     opacity: 0.5;
+}
+
+@media (max-width: 800px) {
+    .genius {
+        width: 80%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .genius {
+        height: 400px;
+    }
 }
